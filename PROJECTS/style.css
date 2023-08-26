@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'HeliosExt';
+    src: url('HeliosExt.otf');
+}
+@font-face {
+    font-family: 'Blanka-Regular';
+    src: url('Blanka-Regular.otf');
+}
+@font-face {
+    font-family: 'HeliosExt-Bold';
+    src: url('HeliosExt-Bold.otf');
+}
+body{
+    background: url(images/Line\ Tech.png);
+    
+}
+.projects{
+    width: 100%;
+    height: 90vh;
+    
+}
+.projects .heading h1{
+    margin: 5%;
+    font-size: 60px;
+    font-family: 'Blanka-Regular';
+    color: #fff;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px #000000;
+
+}
+.projects .heading h1 span{
+    color: #D73CBE;
+}
+
+.projects .card{
+    width: 250px;
+    height: 350px;
+    display: inline-block;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    background: rgb(0,74,173);
+    background: radial-gradient(circle, rgba(0,74,173,1) 0%, rgba(203,108,230,1) 100%);
+}
+.caraousel{
+    display: flex;
+    justify-content: space-evenly;
+}
+.caraousel ul{
+    display: flex;
+    gap: 5%;
+
+}
+.caraousel ul li{
+    list-style: none;
+}
+.card .image{
+    width: 200px;
+    height: 180px;
+    border-top-right-radius: 35px;
+    margin-top: 20px;
+    /* background-image: url(images/image\ \(2\).png);
+    background-size: cover; */
+    background: #fff;
+    margin-left: 10%;
+}
+.card .heading{
+    text-align: center;
+    margin-top: 25px
+}
+.card .heading span{
+    font-size: 17px;
+    color: #fff;
+    font-family: 'HeliosExt-Bold';
+}
+.card .para{
+    text-align: center;
+    margin-top: 15px;
+}
+.card .para p{
+    color: #06002E;
+    font-family: 'HeliosExt';
+    font-size: 13px;
+}
+.projects .detail{
+    margin: 5% 16%;
+}
+.projects .detail a button{
+    border-radius: 50px;
+    background: #D73CBE;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+.projects .detail a button:hover{
+    background: #f552da;
+}
+.projects .detail a button i{
+    margin-left: 7px;
+    background-color: #fff;
+    color: #06002E;
+    padding: 10px;
+    border-radius: 50%;
+}
+.projects .detail a button i:hover{
+    color: #D73CBE;
+    background: #06002E;
+}

@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'HeliosExt-Bold';
+    src: url('HeliosExt-Bold.otf');
+}
+@font-face {
+    font-family: 'HeliosExt';
+    src: url('HeliosExt.otf');
+}
+body{
+    background-color: #06002E;
+}
+.bg{
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.FAQ{
+    padding: 2%;
+}
+.FAQ h1{
+    font-size: 35px;
+    color: #fff;
+    font-family: 'HeliosExt-Bold';
+    font-weight: 900;
+    text-align: center;
+    margin-top: 2%;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* text-shadow: 2px 2px 5px #D73CBE; */
+}
+.accordian{
+    margin: 60px;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 2%;
+    margin-left: 22%;
+    justify-content: center;
+
+}
+.accordian li{
+    list-style: none;
+    padding: 5px;
+    width: 100%;
+}
+.accordian li label{
+    font-size: 20px;
+    color: #000;
+    font-family: 'HeliosExt-Bold';
+    background: #D73CBE;
+    display: flex;
+    padding: 15px;
+    position: relative;
+    cursor: pointer;
+}
+.accordian li label:hover{
+    background: #f167da;
+}
+.accordian li label::after{
+    content: "+";
+    right: 20px;
+    font-size: 25px;
+    bottom: 15px;
+    position: absolute;
+    transition: transform 0.5s;
+}
+.accordian input{
+    display: none;
+}
+.accordian .content{
+    background: #fff;
+    margin-top: 2px;
+    max-height: 0px;
+    color: #06002E;
+    padding: 0px 20px;
+    font-family: 'HeliosExt';
+    font-size: 15px;
+    transition: max-height 0.5s, padding 0.5s;
+    overflow: hidden;
+}
+
+.accordian input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordian input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+

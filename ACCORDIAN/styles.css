@@ -1,0 +1,104 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Inconsolata:wght@200&family=Montserrat:wght@300;400&family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+@font-face {
+    font-family: HeliosExt;
+    src: url('HeliosExt.otf');
+}
+
+.bg{
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-size: cover;
+}
+.color-overlay{
+    background: #06002E;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.7;
+}
+@media (min-aspect-ratio: 16/9){
+    .bg{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .bg{
+        width: auto;
+        height: 100%;
+    }
+}
+.faq{
+    padding: 10px 12%;
+    text-align:center;
+}
+.faq h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffff;
+    font-family: HeliosExt;
+
+}
+.accordian{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordian li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordian li label{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight:600;
+    padding: 15px;
+    margin-bottom: 2px;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    background: #D73CBE;
+}
+.accordian li label:hover{
+    background: #e056c9;
+    transition: transform 0.5s;
+}   
+label::after{
+    content: '+';
+    font-size: 35px;
+    font-weight: 600;
+    position: absolute;
+    transition: transform 0.5s;
+    right: 20px;
+    color: aliceblue;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordian .content{
+    background: #ffff;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    transition: max-height 0.5s, padding 0.5s;
+    overflow: hidden;
+}
+.accordian input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordian input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
